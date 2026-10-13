@@ -2,7 +2,7 @@
 
 * Студент: [Денис Черкасов](https://up.htmlacademy.ru/htmlcss-individual/2/user/2726959).
 * Наставник: [Владислав Доровлев](https://htmlacademy.ru/profile/dorovlev).
-
+* Сайт: [Мой проект "Седона"](https://denis-cherkasov.github.io/2726959-sedona-2/).
 ---
 
 _Не удаляйте и не обращайте внимание на файлы:_<br>
