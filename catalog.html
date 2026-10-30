@@ -24,20 +24,19 @@
             <a class="navigation-link navigation-item-current" href="catalog.html" aria-current="page">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
+
+        <ul class="navigation-user-list">
+          <li class="navigation-user-item">
             <!--ссылка-картинка SVG-->
-            <a class="navigation-button-link" href="#">
-              <img class="navigation-search" alt="" src="images/search.svg" width="18" height="18">
+            <a class="navigation-button-link search-icon" href="#">
               <span class="visually-hidden">
                 Поиск
               </span>
             </a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-user-item">
             <!--ссылка-картинка SVG c цифрой-->
-            <a class="navigation-button-link" href="#">
-              <img class="navigation-search" alt="" src="images/favourit.svg" width="18" height="17">
+            <a class="navigation-button-link favourit-icon" href="#">
               <span class="visually-hidden">
                 Избранное
               </span>
@@ -46,9 +45,9 @@
               </span>
             </a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-user-item">
             <!--Ссылка на модальное окно Поиска гостиницы-->
-            <a class="button button-all" href="#">Хочу сюда!</a>
+            <a class="button button-small button-brown" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -62,8 +61,7 @@
           <ul class="breadcrumbs-list">
             <li class="breadcrumbs-item">
               <!--ссылка-картинка SVG-->
-              <a class="breadcrumbs-button-link" href="index.html">
-                <img class="breadcrumbs-logo" alt="" src="images/home.svg" width="12" height="12">
+              <a class="breadcrumbs-button-link home-icon" href="index.html">
                 <span class="breadcrumbs-title visually-hidden">
                   Главная
                 </span>
@@ -72,7 +70,7 @@
             <li class="breadcrumbs-item">
               <a class="breadcrumbs-link" href="catalog.html" aria-current="page">
                 <span class="breadcrumbs-title">
-                  Каталог
+                  Гостиницы
                 </span>
               </a>
           </ul>
@@ -135,15 +133,15 @@
             <fieldset class="catalog-filter-group">
               <legend class="catalog-filter-title">Стоимость, ₽:</legend>
               <label for="price-from-start">От</label>
-              <input type="number" id="price-from-start" name="catalog-filter-price-from" min="0" max="9000" placeholder="0">
+              <input class="catalog-filter-price" type="number" id="price-from-start" name="catalog-filter-price-from" min="0" max="9000" placeholder="0">
               <label for="price-to-end">До</label>
-              <input type="number" id="price-to-end" name="catalog-filter-price-to" min="1" max="9000" placeholder="9000">
+              <input class="catalog-filter-price" type="number" id="price-to-end" name="catalog-filter-price-to" min="1" max="9000" placeholder="9000">
             </fieldset>
 
-            <button class="button catalog-button-apply" type="submit">
+            <button class="button button-small button-blue" type="submit">
               <span>Применить</span>
             </button>
-            <button class="button catalog-button-reset" type="reset">
+            <button class="button button-small button-no-color" type="reset">
               <span>Сбросить</span>
             </button>
           </form>
@@ -155,28 +153,27 @@
         <h2 class="catalog-filter-result">Найдено гостиниц: 38</h2>
 
         <!--Сортировка-->
-        <select class="catalog-sorter" aria-label="Сортировка">
-          <option class="catalog-sorter-option" value="cheap">Сначала дешевые</option>
-          <option class="catalog-sorter-option" value="expensive">Сначала дорогие</option>
-          <option class="catalog-sorter-option" value="popular">Сначала популярные</option>
-        </select>
-        <!--Стрелка сортироки для выпадающего списка-->
-        <img class="catalog-sorter-arrow" alt="" src="images/arrow-down.svg" width="11.93" height="7.02">
-        <button class="visually-hidden" type="button">Отсортировать отели</button>
+        <div class="catalog-sorter-group">
+          <select class="catalog-sorter-combobox" aria-label="Сортировка">
+            <option class="catalog-sorter-option" value="cheap">Сначала дешевые</option>
+            <option class="catalog-sorter-option" value="expensive">Сначала дорогие</option>
+            <option class="catalog-sorter-option" value="popular">Сначала популярные</option>
+          </select>
+          <!--Стрелка сортироки для выпадающего списка-->
+          <!--<img class="catalog-sorter-arrow" alt="" src="images/arrow-down.svg" width="11.93" height="7.02">-->
+          <button class="visually-hidden button button-small" type="button">Отсортировать отели</button>
 
-        <!--Внешний вид-->
-        <a class="catalog-view-button catalog-view-button-used" href="#">
-          <img class="catalog-view-type" alt="" src="images/view-card.svg" width="16" height="14">
-          <span class="visually-hidden">Показать карточками</span>
-        </a>
-        <a class="catalog-view-button" href="#">
-          <img class="catalog-view-type" alt="" src="images/view-huge.svg" width="16" height="14">
-          <span class="visually-hidden">Показать крупно</span>
-        </a>
-        <a class="catalog-view-button" href="#">
-          <img class="catalog-view-type" alt="" src="images/view-list.svg" width="16" height="14">
-          <span class="visually-hidden">Показать списком</span>
-        </a>
+          <!--Внешний вид-->
+          <a class="catalog-view-button catalog-view-button-used view-card-icon" href="#">
+            <span class="visually-hidden">Показать карточками</span>
+          </a>
+          <a class="catalog-view-button view-huge-icon" href="#">
+            <span class="visually-hidden">Показать крупно</span>
+          </a>
+          <a class="catalog-view-button view-list-icon" href="#">
+            <span class="visually-hidden">Показать списком</span>
+          </a>
+        </div>
 
         <!--Карточки отелей-->
         <ul class="catalog-hotel-list">
@@ -188,9 +185,9 @@
             <p class="catalog-hotel-card-type">Гостиница</p>
             <p class="catalog-hotel-card-price">От 4000 ₽</p>
             <!--Ссылка на описание отеля-->
-            <a class="catalog-hotel-card-button-about" href="#">Подробнее</a>
+            <a class="button button-small button-brown" href="#">Подробнее</a>
             <!--Кнопка на добавление отеля в избранное-->
-            <button class="catalog-hotel-card-button-favourit" type="button" aria-pressed="false" aria-label="В избранное">
+            <button class="button button-small button-blue" type="button" aria-pressed="false" aria-label="В избранное">
               В избранное
             </button>
             <!--Изображение рейтинга отеля-->
@@ -198,7 +195,7 @@
               <span class="visually-hidden">Отель 4 звезды</span>
             </p>
             <!--Ссылка на отзывы/рейтинг отеля-->
-            <a class="catalog-hotel-card-button-rating" href="#">Рейтинг: 5,0</a>
+            <a class="button button-small button-grey" href="#">Рейтинг: 5,0</a>
           </li>
 
           <li class="catalog-hotel-item">
@@ -209,17 +206,17 @@
             <span class="catalog-hotel-card-type">Гостиница</span>
             <span class="catalog-hotel-card-price">От 5000 ₽</span>
             <!--Ссылка на описание отеля-->
-            <a class="catalog-hotel-card-button-about" href="#">Подробнее</a>
+            <a class="button button-small button-brown" href="#">Подробнее</a>
             <!--Кнопка на добавление отеля в избранное-->
-            <button class="catalog-hotel-card-button-favourit" type="button" aria-pressed="true" aria-label="В избранном">
-              В избранное
+            <button class="button button-small button-blue" type="button" aria-pressed="true" aria-label="В избранном">
+              В избранном
             </button>
             <!--Изображение рейтинга отеля-->
             <p class="catalog-hotel-card-rating rating-four-stars">
               <span class="visually-hidden">Отель 4 звезды</span>
             </p>
             <!--Ссылка на отзывы/рейтинг отеля-->
-            <a class="catalog-hotel-card-button-rating" href="#">Рейтинг: 9,2</a>
+            <a class="button button-small button-grey" href="#">Рейтинг: 9,2</a>
           </li>
 
           <li class="catalog-hotel-item">
@@ -230,9 +227,9 @@
             <span class="catalog-hotel-card-type">Гостиница</span>
             <span class="catalog-hotel-card-price">От 2500 ₽</span>
             <!--Ссылка на описание отеля-->
-            <a class="catalog-hotel-card-button-about" href="#">Подробнее</a>
+            <a class="button button-small button-brown" href="#">Подробнее</a>
             <!--Кнопка на добавление отеля в избранное-->
-            <button class="catalog-hotel-card-button-favourit" type="button" aria-pressed="false" aria-label="В избранное">
+            <button class="button button-small button-blue" type="button" aria-pressed="false" aria-label="В избранное">
               В избранное
             </button>
             <!--Изображение рейтинга отеля-->
@@ -240,7 +237,7 @@
               <span class="visually-hidden">Отель 3 звезды</span>
             </p>
             <!--Ссылка на отзывы/рейтинг отеля-->
-            <a class="catalog-hotel-card-button-rating" href="#">Рейтинг: 6,9</a>
+            <a class="button button-small button-grey" href="#">Рейтинг: 6,9</a>
           </li>
 
           <li class="catalog-hotel-item">
@@ -251,9 +248,9 @@
             <span class="catalog-hotel-card-type">Гостиница</span>
             <span class="catalog-hotel-card-price">От 1500 ₽</span>
             <!--Ссылка на описание отеля-->
-            <a class="catalog-hotel-card-button-about" href="#">Подробнее</a>
+            <a class="button button-small button-brown" href="#">Подробнее</a>
             <!--Кнопка на добавление отеля в избранное-->
-            <button class="catalog-hotel-card-button-favourit" type="button" aria-pressed="false" aria-label="В избранное">
+            <button class="button button-small button-blue" type="button" aria-pressed="false" aria-label="В избранное">
               В избранное
             </button>
             <!--Изображение рейтинга отеля-->
@@ -261,7 +258,7 @@
               <span class="visually-hidden">Отель 2 звезды</span>
             </p>
             <!--Ссылка на отзывы/рейтинг отеля-->
-            <a class="catalog-hotel-card-button-rating" href="#">Рейтинг: 5,0</a>
+            <a class="button button-small button-grey" href="#">Рейтинг: 5,0</a>
           </li>
         </ul>
 
@@ -306,12 +303,12 @@
 
       <section class="subscribe-2">
         <h2 class="visually-hidden">Подписка</h2>
-        <p class="subscribe-title-2">Подпишитесь на рассылку</p>
-        <p class="subscribe-description-2">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form class="subscribe-form-2" action="https://echo.htmlacademy.ru/" method="post">
+        <p class="subscribe-phrase-title">Подпишитесь на рассылку</p>
+        <p class="subscribe-phrase-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="subscribe-user-email">Почта</label>
           <input class="subscribe-field" type="email" name="subscribe-user-email" id="subscribe-user-email" placeholder="Ваш e-mail" required>
-          <button class="button subscribe-button" type="submit">
+          <button class="button button-big button-blue" type="submit">
             <span>Подписаться</span>
           </button>
         </form>
@@ -323,20 +320,17 @@
       <!--Социальные сети-->
       <ul class="social-list">
         <li class="social-item">
-          <a class="social-button" href="https://vk.com/htmlacademy">
-            <img class="social-logo" alt="" src="images/vkontakte.svg" width="24" height="14">
+          <a class="social-button vk-icon" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Vkontakte</span>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-button" href="https://t.me/htmlacademy">
-            <img class="social-logo" alt="" src="images/telegram.svg" width="18" height="15.1">
+          <a class="social-button tg-icon" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Telegram</span>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-button" href="https://www.youtube.com/user/htmlacademyru">
-            <img class="social-logo" alt="" src="images/youtube.svg" width="22" height="17">
+          <a class="social-button yt-icon" href="https://www.youtube.com/user/htmlacademyru">
             <span class="visually-hidden">Youtube</span>
           </a>
         </li>
@@ -349,8 +343,10 @@
 
       <!--Ссылка на академию-->
       <address class="contacts-link-address">
-        <a class="contacts-link-email" href="https://htmlacademy.ru/">
-          <img class="social-logo" alt="" src="images/html-academy.svg" width="114.9" height="32.9">
+        <a class="contacts-link-email ha-icon" href="https://htmlacademy.ru/">
+          <span class="visually-hidden">
+            Ссылка на HTML-Академию
+          </span>
         </a>
       </address>
 

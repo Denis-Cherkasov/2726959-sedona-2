@@ -24,20 +24,19 @@
             <a class="navigation-link" href="catalog.html">Гостиницы</a>
           </li>
         </ul>
-        <ul class="navigation-list navigation-user">
-          <li class="navigation-item">
+
+        <ul class="navigation-user-list">
+          <li class="navigation-user-item">
             <!--ссылка-картинка SVG search-->
-            <a class="navigation-button-link" href="#">
-              <img class="navigation-search" alt="" src="images/search.svg" width="18" height="18">
+            <a class="navigation-button-link search-icon" href="#">
               <span class="visually-hidden">
                 Поиск
               </span>
             </a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-user-item">
             <!--ссылка-картинка SVG favourit с цифрой-->
-            <a class="navigation-button-link" href="#">
-              <img class="navigation-search" alt="" src="images/favourit.svg" width="18" height="17">
+            <a class="navigation-button-link favourit-icon" href="#">
               <span class="visually-hidden">
                 Избранное
               </span>
@@ -46,9 +45,9 @@
               </span>
             </a>
           </li>
-          <li class="navigation-item">
+          <li class="navigation-user-item">
             <!--Ссылка на модальное окно Поиска гостиницы-->
-            <a class="button button-all" href="#">Хочу сюда!</a>
+            <a class="button button-small button-brown" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
@@ -58,7 +57,6 @@
       <!--Основной заголовок-->
       <section class="main-welcome">
         <h1 class="visually-hidden">Добро пожаловать в Седону</h1>
-        <!--Здесь вставить SVG фразу, но отдельно скачать фон для background CSS-->
         <img class="main-welcome-logo" alt="Welcome to the gorgeous Sedona 'Because the Grand Canyon sucks!'" src="images/main-welcome.svg" width="458" height="352">
       </section>
       <!--Список преимуществ-->
@@ -67,27 +65,27 @@
         <p class="advantages-phrase-title">Седона — небольшой городок в Аризоне,<br>заслуживающий большего!</p>
         <p class="advantages-phrase-description">Рассмотрим причины, по которым Седона круче, чем Гранд-Каньон!</p>
         <ul class="advantages-list">
-          <li class="advantages-item">
-            <h3 class="advantages-title">Настоящий городок</h3>
-            <p class="advantages-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+          <li class="advantages-item background-deep">
+            <h3 class="advantages-title text-light">Настоящий городок</h3>
+            <p class="advantages-description text-light">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
+            <img class="advantages-decorative-photo" alt="Отель на фоне гор" src="images/decorative-photo-1.jpg" width="800" height="385">
           </li>
-          <img class="advantages-decorative-photo" alt="Отель на фоне гор" src="images/decorative-photo-1.jpg" width="800" height="385">
-          <li class="advantages-item">
+          <li class="advantages-item background-pale">
             <h3 class="advantages-title">Небольшая<br>площадь</h3>
             <p class="advantages-description">Все достопримечательности находятся очень близко</p>
           </li>
-          <li class="advantages-item">
+          <li class="advantages-item background-light">
             <h3 class="advantages-title">Красивая<br>дорога</h3>
             <p class="advantages-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </li>
-          <li class="advantages-item">
+          <li class="advantages-item background-pale">
             <h3 class="advantages-title">Мало<br>туристов</h3>
             <p class="advantages-description">Большинство едет в Гранд Каньон и толпится там</p>
           </li>
-          <img class="advantages-decorative-photo" alt="Горный пейзаж" src="images/decorative-photo-2.jpg" width="800" height="385">
-          <li class="advantages-item">
-            <h3 class="advantages-title">Там есть<br>мост дьявола</h3>
-            <p class="advantages-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
+          <li class="advantages-item background-deep">
+            <img class="advantages-decorative-photo" alt="Горный пейзаж" src="images/decorative-photo-2.jpg" width="800" height="385">
+            <h3 class="advantages-title text-light">Там есть<br>мост дьявола</h3>
+            <p class="advantages-description text-light">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
           </li>
         </ul>
       </section>
@@ -99,18 +97,15 @@
         <p class="services-phrase-description">Опытный персонал и качественное обслуживание!</p>
         <!--Список услуг-->
         <ul class="services-list">
-          <li class="services-item">
-            <img class="services-logo" alt="" src="images/house.svg" width="75" height="72">
+          <li class="services-item background-pale house-icon">
             <h3 class="services-title">Жильё</h3>
             <p class="services-description">Рекомендуем пожить в настоящем мотеле,<br>всё как в кино!</p>
           </li>
-          <li class="services-item">
-            <img class="services-logo" alt="" src="images/food.svg" width="74" height="70">
+          <li class="services-item food-icon">
             <h3 class="services-title">Еда</h3>
             <p class="services-description">Всегда заказывайте<br>топовый фирменный бургер, вы не разочаруетесь!</p>
           </li>
-          <li class="services-item">
-            <img class="services-logo" alt="" src="images/souvenir.svg" width="64" height="76">
+          <li class="services-item background-pale souvenir-icon">
             <h3 class="services-title">Сувениры</h3>
             <p class="services-description">Не только китайского,<br>но и настоящего местного производства!</p>
           </li>
@@ -123,19 +118,21 @@
         <p class="search-phrase-title">Заинтересовались?</p>
         <p class="search-phrase-description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         <!--Ссылка на модальное окно Поиска гостиницы-->
-        <a class="button button-all" href="#">Поиск гостиницы в Седоне</a>
+        <div class="search_button">
+          <a class="button button-big button-brown" href="#">Поиск гостиницы в Седоне</a>
+        </div>
       </section>
 
       <!--Подписка на рассылку-->
       <section class="subscribe-1">
         <!--Нужен фон subscribe-background-->
         <h2 class="visually-hidden">Подписка</h2>
-        <p class="subscribe-title-1">Подпишитесь на рассылку</p>
-        <p class="subscribe-description-1">Только полезная информация и никакого спама, честное бойскаутское!</p>
-        <form class="subscribe-form-1" action="https://echo.htmlacademy.ru/" method="post">
+        <p class="subscribe-phrase-title">Подпишитесь на рассылку</p>
+        <p class="subscribe-phrase-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+        <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="subscribe-user-email">Почта</label>
           <input class="subscribe-field" type="email" name="subscribe-user-email" id="subscribe-user-email" placeholder="Ваш e-mail" required>
-          <button class="button subscribe-button" type="submit">
+          <button class="button button-big button-blue" type="submit">
             <span>Подписаться</span>
           </button>
         </form>
@@ -147,20 +144,17 @@
       <!--Социальные сети-->
       <ul class="social-list">
         <li class="social-item">
-          <a class="social-button" href="https://vk.com/htmlacademy">
-            <img class="social-logo" alt="" src="images/vkontakte.svg" width="24" height="14">
+          <a class="social-button vk-icon" href="https://vk.com/htmlacademy">
             <span class="visually-hidden">Vkontakte</span>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-button" href="https://t.me/htmlacademy">
-            <img class="social-logo" alt="" src="images/telegram.svg" width="18" height="15.1">
+          <a class="social-button tg-icon" href="https://t.me/htmlacademy">
             <span class="visually-hidden">Telegram</span>
           </a>
         </li>
         <li class="social-item">
-          <a class="social-button" href="https://www.youtube.com/user/htmlacademyru">
-            <img class="social-logo" alt="" src="images/youtube.svg" width="22" height="17">
+          <a class="social-button yt-icon" href="https://www.youtube.com/user/htmlacademyru">
             <span class="visually-hidden">Youtube</span>
           </a>
         </li>
@@ -173,8 +167,10 @@
 
       <!--Ссылка на академию-->
       <address class="contacts-link-address">
-        <a class="contacts-link-email" href="https://htmlacademy.ru/">
-          <img class="social-logo" alt="" src="images/html-academy.svg" width="114.9" height="32.9">
+        <a class="contacts-link-email ha-icon" href="https://htmlacademy.ru/">
+          <span class="visually-hidden">
+            Ссылка на HTML-Академию
+          </span>
         </a>
       </address>
 
